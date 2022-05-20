@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Profile</title>
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../assets/css/feathericon.min.css">
+	<link rel="stylesheet" href="../assets/plugins/morris/morris.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<div class="header">
+			<div class="header-left">
+				<a href="index.html" class="logo"> <img class="rounded-circle" src="../assets/img/hotel_logo.png"
+						width="50" height="70" alt="logo"> </a>
+				<a href="index.html" class="logo logo-small"> <img class="rounded-circle"
+						src="../assets/img/hotel_logo.png" alt="Logo" width="30" height="30"> </a>
+			</div>
+			<a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
+			<a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
+			<ul class="nav user-menu">
+
+				<li class="nav-item dropdown has-arrow">
+					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img
+								class="rounded-circle" src="../assets/img/hotel_logo.png" width="31"
+								alt="Soeng Souy"></span> </a>
+					<div class="dropdown-menu">
+						<div class="user-header">
+							<div class="avatar avatar-sm"> <img src="../assets/img/hotel_logo.png" alt="User Image"
+									class="avatar-img rounded-circle"> </div>
+							<div class="user-text">
+								<h6>Sohaib Hassan</h6>
+								<p class="text-muted mb-0">Administrator</p>
+							</div>
+						</div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item"
+							href="login.html" target="self">Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="sidebar" id="sidebar">
+			<div class="sidebar-inner slimscroll">
+				<div id="sidebar-menu" class="sidebar-menu">
+					<ul>
+						<li> <a href="Profile.html"><i class="fas fa-home"></i> <span> Home</span></a> </li>
+						<li class="list-divider"></li>
+						<li> <a href="Room-Shifting.html"><i class="fas fa-random"></i> <span> Room Shifting </span>
+						</li>
+						<li class="list-divider"></li>
+						<li> <a href="Check-Out.html"><i class="fas fa-user-times"></i> <span> Check Out <span>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<div class="page-header">
+					<div class="row align-items-center">
+						<div class="col">
+							<h3 class="page-title mt-5">Room Shifting Request</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<form>
+							<div class="row formtype">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Roll Number</label>
+										<input type="text" class="form-control" id="usr1" required placeholder="19F-0930">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Current Room Number</label>
+										<input class="form-control" type="text" placeholder="G101" required>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>To Room Number</label>
+										<input class="form-control" type="text" placeholder="F21" required>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Room Type</label>
+										<select class="form-control" id="sel1" name="sellist1" required>
+											<option>Select</option>
+											<option>Single</option>
+											<option>Double</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Reason</label>
+										<textarea class="form-control" rows="5" id="comment" name="text"></textarea required>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary buttonedit ml-2">Submit</button>
+							<button type="reset" class="btn btn-primary buttonedit mll-2">Cancel</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script src="../assets/js/jquery-3.5.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<script src="../assets/js/moment.min.js"></script>
+	<script src="../assets/js/select2.min.js"></script>
+	<script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../assets/js/script.js"></script>
+</body>
+
+</html>
