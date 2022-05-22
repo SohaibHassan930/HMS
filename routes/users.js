@@ -2,14 +2,9 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-const nodemailer = require('nodemailer');
-const { google } = require("googleapis");
-const OAuth2 = google.auth.OAuth2;
-const jwt = require('jsonwebtoken');
-const JWT_KEY = "jwtactive987";
-const JWT_RESET_KEY = "jwtreset987";
 // Load User model
 const User = require('../Model/user');
+const userInfo = require('../Model/userinfo');
 const { forwardAuthenticated } = require('../config/auth');
 
 // Login Page
@@ -18,8 +13,11 @@ router.get('/Login', forwardAuthenticated, (req, res) => res.render('Login'));
 // Profile button press
 router.get('/Profile', forwardAuthenticated, (req, res) => res.render('Profile'));
 
-// Register Page
+// Signup Page
 router.get('/Signin', forwardAuthenticated, (req, res) => res.render('Signin'));
+
+//------------ Register Form Route ------------//
+router.get('/Register', (req, res) => res.render('Register'));
 
 // Register
 router.post('/Signin', (req, res) => {
@@ -39,7 +37,7 @@ router.post('/Signin', (req, res) => {
     }
 
     if (errors.length > 0) {
-        res.render('register', {
+        res.render('Signin', {
             errors,
             name,
             email,
@@ -50,7 +48,7 @@ router.post('/Signin', (req, res) => {
         User.findOne({ email: email }).then(user => {
             if (user) {
                 errors.push({ msg: 'Email already exists' });
-                res.render('register', {
+                res.render('Signin', {
                     errors,
                     name,
                     email,
@@ -75,7 +73,7 @@ router.post('/Signin', (req, res) => {
                                     'success_msg',
                                     'You are now registered and can log in'
                                 );
-                                res.redirect('/users/Login');
+                                res.redirect('/users/Register');
                             })
                             .catch(err => console.log(err));
                     });
@@ -139,6 +137,28 @@ router.post('/forgot', (req, res) => {
             }
         }
     });
+});
+
+//------------ Register Form Handle ------------//
+router.post('/Register', (req, res, next) => {
+    var userinfo = new userInfo({
+        fname: req.body.fname,
+        lname: req.body.lname,
+        dob: req.body.dob,
+        cnic: req.body.cnic,
+        mobile: req.body.mob,
+        gender: req.body.gender,
+        address: req.body.address,
+        home_phone: req.body.HP,
+        postal_code: req.body.PC,
+        city: req.body.city,
+        cid: req.body.cid,
+        room_type: req.body.room,
+        room_number: req.body.room_num,
+        mess: req.body.mess
+    })
+    userinfo.save();
+    res.redirect('/users/Login');
 });
 
 module.exports = router;

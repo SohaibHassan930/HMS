@@ -2,17 +2,31 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
-    background-image: url("https://i.imgur.com/GMmCQHC.png");
+    background-image: url("https://cdn.pixabay.com/photo/2013/10/21/09/57/hostel-198945_1280.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%
 }
 
+h3 {
+    color: aliceblue;
+}
+
+label {
+    color: whitesmoke;
+    font-weight: lighter;
+}
+
+input::placeholder {
+    color: rgb(4, 5, 6);
+}
+
 .card {
-    padding: 30px 40px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding: 10px 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: none !important;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+        /* background-color: chartreuse; */
 }
 
 .blue-text {
@@ -46,6 +60,7 @@ textarea:focus {
 }
 
 .btn-block {
+    color: aliceblue;
     text-transform: uppercase;
     font-size: 15px !important;
     font-weight: 400;
@@ -54,7 +69,7 @@ textarea:focus {
 }
 
 .btn-block:hover {
-    color: #fff !important
+    color: rgb(11, 208, 234) !important
 }
 
 button:focus {

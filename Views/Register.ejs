@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personal Info</title>
+    <link rel="stylesheet" href="Form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+
+</head>
+
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <!-- <h3>Register Your Self</h3> -->
+                <div class="card" style="    background: rgba(236, 213, 213, 0.412);">
+                    <h3 class="text-center mb-4">Register Your Self</h3>
+                    <form class="form-card" method="post" action="/users/Register">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">First name<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="fname" name="fname" placeholder="Sohaib" required>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Last name<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="lname" name="lname" placeholder="Hassan" required>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Date of Birth<span class="text-danger">
+                                        *</span></label>
+                                <input type="date" id="dob" name="dob" placeholder="" required>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">CNIC<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="cnic" name="cnic" placeholder="xxxxx-xxxxxxx-x" required>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Phone number<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="mob" name="mob" placeholder="xxxxxxxxxxx" required>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex" required>
+                                <label class="form-control-label px-3">Gender<span class="text-danger">*</span>
+                                </label>
+                                <select name="gender" id="gender" class="form-control">
+                                    <option disabled selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Address<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="address" name="address" placeholder="Muhalah Fateh Abad"
+                                    required>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Home Phone<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="HP" name="HP" placeholder="xxxxxxxxxxx" required>
+                            </div>
+                        </div>
+                        <div class=" row justify-content-between text-left">
+
+                            <div class=" form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Postal Code<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="PC" name="PC" placeholder="3500" required>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">City<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="city" name="city" placeholder="Chiniot" required>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Check in Date<span class="text-danger">
+                                        *</span></label>
+                                <input type="date" id="cid" name="cid" placeholder="" required>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Room Type<span class="text-danger">*</span>
+                                </label>
+                                <select name="room" id="room" class="form-control" required>
+                                    <option>Select</option>
+                                    <option>Single</option>
+                                    <option>Double</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Room Number<span class="text-danger">*</span>
+                                </label>
+                                <select name="room_num" id="room_num" class="form-control" required>
+                                    <option disabled selected>Select</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>101</option>
+                                    <option>40</option>
+                                    <option>34</option>
+                                    <option>14</option>
+                                    <option>49</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Mess<span class="text-danger">*</span>
+                                </label>
+                                <select name="mess" id="mess" class="form-control" required>
+                                    <option disabled selected>Select</option>
+                                    <option>Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6">
+                                <button type="submit" class="btn-block"
+                                    style="background: rgba(11, 72, 98, 0.412);">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="reg.js"></script>
+</body>
+
+</html>
