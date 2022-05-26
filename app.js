@@ -57,15 +57,7 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 
-const PORT = process.env.PORT || 8090;
-
-
-app.use(express.static('assets/css'))
-app.use(express.static('assets/plugins/fontawesome/css'))
-app.use(express.static('assets/plugins/morris'))
-app.use(express.static('assets/img'))
-app.use(express.static('assets/js')) 
-app.use(express.static('assets/plugins/slimscroll')) 
+const PORT = process.env.PORT || 8090; 
 
 // create application/json parser
 var jsonParser = bodyParser.json()

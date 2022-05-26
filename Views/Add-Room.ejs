@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Add Room</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="font-face.css" rel="stylesheet" media="all">
+    <link href="font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="animsition.min.css" rel="stylesheet" media="all">
+    <link href="bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="animate.css" rel="stylesheet" media="all">
+    <link href="hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="slick.css" rel="stylesheet" media="all">
+    <link href="select2.min.css" rel="stylesheet" media="all">
+    <link href="perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block">
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <!-- <img src="images/icon/logo-white.png" alt="CoolAdmin" /> -->
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="Admin-Dashboard.html">
+                                    <i class="fas "></i>Home
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#">
+                                    <i class="fas "></i>
+                                    <span class="bot-line"></span>Student
+                                </a>
+                                <ul class="header3-sub-list list-unstyled">
+                                    <li>
+                                        <a href="Student-View.html">Students View</a>
+                                    </li>
+                                    <li>
+                                        <a href="Student-Edit.html">Students Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#">
+                                    <i class="fas "></i>
+                                    <span class="bot-line"></span>Room
+                                </a>
+                                <ul class="header3-sub-list list-unstyled">
+                                    <li>
+                                        <a href="Room-View.html">Room View</a>
+                                    </li>
+                                    <li>
+                                        <a href="Room-View.html">Room Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="Add-Room.html">Add Room</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="Room-Shifting.html">
+                                    <i class="fas "></i>Room Shifting
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Check-Out.html">
+                                    <i class="fas "></i>Check Out
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__tool">
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="images/icon/avatar-01.png" alt="Raees" />
+                                </div>
+                                <!-- <div class="content">
+                                    <a class="js-acc-btn" href="#">Raess Malik</a>
+                                </div> -->
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <img src="images/icon/avatar-01.png" alt="Raees" />
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                Raees Malik
+                                            </h5>
+                                            <span class="email">f190963@cfd.nu.edu.pk</span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="Admin-Profile.html">
+                                                <i class="zmdi zmdi-account"></i>Profile
+                                            </a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-power"></i>Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <!-- <img src="images/icon/logo-white.png" alt="CoolAdmin" /> -->
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="Admin-Dashboard.html">
+                                <i class="fas "></i>Home
+                            </a>
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas "></i>Student</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="Student-View.html">Students View</a>
+                                </li>
+                                <li>
+                                    <a href="Student-Edit.html">Students Edit</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas "></i>Room</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="Room-View.html">Room View</a>
+                                </li>
+                                <li>
+                                    <a href="Room-Edit.html">Room Edit</a>
+                                </li>
+                                <li>
+                                    <a href="Add-Room.html">Add Room</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Room-Shifting.html">
+                                <i class="fas "></i>Room Shifting
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Check-Out.html">
+                                <i class="fas "></i>Check Out
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Admin-Dashboard.html">
+                                <i class="fas "></i>Logout
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.png" alt="Raees" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">Raees Malik</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.png" alt="Raees" />
+                                        
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        Raees Malik
+                                    </h5>
+                                    <span class="email">f190963@cfd.nu.edu.pk</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="Admin-Profile.html">
+                                        <i class="zmdi zmdi-account"></i>Profile
+                                    </a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER MOBILE -->
+
+        <!-- PAGE CONTENT-->
+        <div class="page-content--bgf7">
+            <!-- BREADCRUMB-->
+            <section class="au-breadcrumb2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="au-breadcrumb-content">
+                                <div class="au-breadcrumb-left">
+                                    <span class="au-breadcrumb-span">You are here:</span>
+                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                        <li class="list-inline-item active">
+                                            <a href="#">Room</a>
+                                        </li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item">Add</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+
+            <!-- WELCOME-->
+            <section class="welcome p-t-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="title-4">Add New
+                                <span>Room</span>
+                            </h1>
+                            <hr class="line-seprate">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END WELCOME-->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <form>
+                        <div class="row formtype">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Room Number</label>
+                                    <input class="form-control" type="text" value="BKG-0001">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Room Type</label>
+                                    <select class="form-control" id="sel1" name="sellist1">
+                                        <option>Select</option>
+                                        <option>Single</option>
+                                        <option>Double</option>
+                                        <option>Quad</option>
+                                        <option>King</option>
+                                        <option>Suite</option>
+                                        <option>Villa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>AC/NON-AC</label>
+                                    <select class="form-control" id="sel2" name="sellist1">
+                                        <option>Select</option>
+                                        <option>AC</option>
+                                        <option>NON-AC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Food</label>
+                                    <select class="form-control" id="sel3" name="sellist1">
+                                        <option>Select</option>
+                                        <option>Free Breakfast</option>
+                                        <option>Free Lunch</option>
+                                        <option>Free Dinner</option>
+                                        <option>Free Breakfast & Dinner</option>
+                                        <option>Free Welcome Drink</option>
+                                        <option>No Free Food</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Bed Count</label>
+                                    <select class="form-control" id="sel" name="sellist1">
+                                        <option>Select</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Charges For cancellation</label>
+                                    <select class="form-control" id="sel4" name="sellist1">
+                                        <option>Select</option>
+                                        <option>Free</option>
+                                        <option>5% Before 24Hours</option>
+                                        <option>No Cancellation Allow</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Rent</label>
+                                    <input type="text" class="form-control" id="usr">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="text" class="form-control" id="usr1">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>File Upload</label>
+                                    <div class="custom-file mb-3">
+                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Message</label>
+                                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary buttonedit ml-2">Save</button>
+            <!-- <button type="button" class="btn btn-primary buttonedit">Cancel</button> -->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="slick.min.js">
+    </script>
+    <script src="wow.min.js"></script>
+    <script src="animsition.min.js"></script>
+    <script src="bootstrap-progressbar.min.js">
+    </script>
+    <script src="jquery.waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js">
+    </script>
+    <script src="circle-progress.min.js"></script>
+    <script src="perfect-scrollbar.js"></script>
+    <script src="Chart.bundle.min.js"></script>
+    <script src="select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

@@ -16,8 +16,36 @@ router.get('/Profile', forwardAuthenticated, (req, res) => res.render('Profile')
 // Signup Page
 router.get('/Signin', forwardAuthenticated, (req, res) => res.render('Signin'));
 
-//------------ Register Form Route ------------//
-router.get('/Register', (req, res) => res.render('Register'));
+// Register Page
+router.get('/Signin', forwardAuthenticated, (req, res) => res.render('Signin'));
+
+// Admin Home View
+router.get('/Admin-Dashboard', (req, res) => res.render('Admin-Dashboard'));
+
+
+// Student View
+router.get('/Student-View', (req, res) => {
+    userInfo.find().exec((err,userInf)=>{
+        if(err){
+            res.json({message: err.message});
+        }
+        else{
+            res.render('Student-View',{userInf:userInf});
+        }
+    });
+});
+
+// Student Edit
+router.get('/Student-Edit', (req, res) => res.render('Student-Edit'));
+
+// Room View
+router.get('/Room-View', (req, res) => res.render('Room-View'));
+
+// Room Edit
+router.get('/Room-Edit', (req, res) => res.render('Room-Edit'));
+
+// Add Room
+router.get('/Add-Room', (req, res) => res.render('Add-Room'));
 
 // Register
 router.post('/Signin', (req, res) => {
@@ -98,6 +126,9 @@ router.get('/Logout', (req, res) => {
     req.flash('success_msg', 'You are logged out');
     res.redirect('/users/Login');
 });
+
+//------------ Register Form Route ------------//
+router.get('/Register', (req, res) => res.render('Register'));
 
 //------------ Forgot Password Route ------------//
 router.get('/forgot', (req, res) => res.render('forgot'));

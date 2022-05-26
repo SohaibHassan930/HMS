@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Title Page-->
+    <title>Admin</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="font-face.css" rel="stylesheet" media="all">
+    <link href="font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="animsition.min.css" rel="stylesheet" media="all">
+    <link href="bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="animate.css" rel="stylesheet" media="all">
+    <link href="css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="slick.css" rel="stylesheet" media="all">
+    <link href="select2.min.css" rel="stylesheet" media="all">
+    <link href="perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="theme.css" rel="stylesheet" media="all">
+
+
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="fontawesome.min.css">
+    <link rel="stylesheet" href="feathericon.min.css">
+    <link rel="stylesheet" href="morris.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block">
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <!-- <img src="images/icon/logo-white.png" alt="CoolAdmin" /> -->
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="Admin-Dashboard.html">
+                                    <i class="fas "></i>Home
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#">
+                                    <i class="fas "></i>
+                                    <span class="bot-line"></span>Student
+                                </a>
+                                <ul class="header3-sub-list list-unstyled">
+                                    <li>
+                                        <a href="Student-View.html">Students View</a>
+                                    </li>
+                                    <li>
+                                        <a href="Student-Edit.html">Students Edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#">
+                                    <i class="fas "></i>
+                                    <span class="bot-line"></span>Room
+                                </a>
+                                <ul class="header3-sub-list list-unstyled">
+                                    <li>
+                                        <a href="Room-View.html">Room View</a>
+                                    </li>
+                                    <li>
+                                        <a href="Room-Edit.html">Room Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="Add-Room.html">Add Room</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="Room-Shifting.html">
+                                    <i class="fas "></i>Room Shifting
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Check-Out.html">
+                                    <i class="fas "></i>Check out
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__tool">
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="images/icon/avatar-01.png" alt="Raees" />
+                                </div>
+                                <!-- <div class="content">
+                                    <a class="js-acc-btn" href="#">Raess Malik</a>
+                                </div> -->
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <img src="images/icon/avatar-01.png" alt="Raees" />
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                Raees Malik
+                                            </h5>
+                                            <span class="email">f190963@cfd.nu.edu.pk</span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="Admin-Profile.html">
+                                                <i class="zmdi zmdi-account"></i>Profile
+                                            </a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-power"></i>Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <!-- <img src="images/icon/logo-white." alt="CoolAdmin" /> -->
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="Admin-Dashboard.html">
+                                <i class="fas "></i>Home
+                            </a>
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas "></i>Student</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="Student-View.html">Students View</a>
+                                </li>
+                                <li>
+                                    <a href="Student-Edit.html">Students Edit</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas "></i>Room</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="Room-View.html">Room View</a>
+                                </li>
+                                <li>
+                                    <a href="Room-Edit.html">Room Edit</a>
+                                </li>
+                                <li>
+                                    <a href="Add-Room.html">Add Room</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Room-Shifting.html">
+                                <i class="fas "></i>Room Shifting
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Check-Out.html">
+                                <i class="fas "></i>Check out
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Admin-Dashboard.html">
+                                <i class="fas "></i>Logout
+                                <span class="bot-line"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.png" alt="Raees" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">Raees Malik</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.png" alt="Raees" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        Raees Malik
+                                    </h5>
+                                    <span class="email">f190963@cfd.nu.edu.pk</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="Admin-Profile.html">
+                                        <i class="zmdi zmdi-account"></i>Profile
+                                    </a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER MOBILE -->
+
+        <!-- PAGE CONTENT-->
+        <div class="page-content--bgf7">
+            <!-- BREADCRUMB-->
+            <section class="au-breadcrumb2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="au-breadcrumb-content">
+                                <div class="au-breadcrumb-left">
+                                    <span class="au-breadcrumb-span">You are here:</span>
+                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                        <li class="list-inline-item active">
+                                            <a href="#">Admin</a>
+                                        </li>
+                                        <li class="list-inline-item seprate">
+                                            <span>/</span>
+                                        </li>
+                                        <li class="list-inline-item">Profile</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+
+            <!-- WELCOME-->
+            <section class="welcome p-t-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="title-4">Hostel
+                                <span>Admin</span>
+                            </h1>
+                            <hr class="line-seprate">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END WELCOME-->
+
+            <!-- STATISTIC-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="profile-header">
+                        <div class="row align-items-center">
+                            <div class="col-auto profile-image">
+                                <a href="#"> <img class="rounded-circle" alt="User Image"
+                                        src="images/icon/avatar-01.png"> </a>
+                            </div>
+                            <div class="col ml-md-n2 profile-user-info">
+                                <h4 class="user-name mb-3">Raees Malik</h4>
+                                <h6 class="text-muted mt-1">Admin</h6>
+                                <div class="user-Location mt-1"><i class="fas fa-map-marker-alt"></i> Fast Loonawala,
+                                    Chiniot</div>
+                                <div class="about-text">A hostel manager develops, manages and trains his staff to be
+                                    able to deliver and maintain quality service to their guests. He must be able to
+                                    train and hire an adequate staffing level in order to have a good ratio of staff to
+                                    guests.</div>
+                            </div>
+                            <div class="col-auto profile-btn">
+                                <a href="edit-profile.html" class="btn btn-primary">
+                                    Edit
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-menu">
+                        <ul class="nav nav-tabs nav-tabs-solid">
+                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab"
+                                    href="#per_details_tab">About</a> </li>
+                            <li class="nav-item"> <a class="nav-link" data-toggle="tab"
+                                    href="#password_tab">Password</a> </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content profile-tab-cont">
+                        <div class="tab-pane fade show active" id="per_details_tab">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title d-flex justify-content-between">
+                                                <span>Personal Details</span>
+                                                <a class="edit-link" data-toggle="modal"
+                                                    href="#edit_personal_details"><i
+                                                        class="fa fa-edit mr-1"></i>Edit</a>
+                                            </h5>
+                                            <div class="row mt-5">
+                                                <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">Name</p>
+                                                <p class="col-sm-9">Raees Malik</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">Date of Birth</p>
+                                                <p class="col-sm-9">24 Jul 1983</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">Email ID </p>
+                                                <p class="col-sm-9">
+                                                    f190963@cfd.nu.edu.pk
+                                                </p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-sm-3 text-sm-right mb-0 mb-sm-3">Mobile</p>
+                                                <p class="col-sm-9">305-310-5857</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-sm-3 text-sm-right mb-0">Address</p>
+                                                <p class="col-sm-9 mb-0">Hidden
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="edit_personal_details" aria-hidden="true" role="dialog">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Personal Details</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"> <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="row form-row">
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>First Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Raees">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Last Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Malik">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label>Date of Birth</label>
+                                                                    <div class="cal-icon">
+                                                                        <input type="text" class="form-control"
+                                                                            value="24-07-1983">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Email ID</label>
+                                                                    <input type="email" class="form-control"
+                                                                        placeholder="f190963@cfd.nu.edu.pk">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Mobile</label>
+                                                                    <input type="text" value="+1 202-555-0125"
+                                                                        class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h5 class="form-title"><span>Address</span></h5>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label>Address</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="4663 Agriculture Lane">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>City</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Chiniot">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>State</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Punjab">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Zip Code</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="3500">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Country</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Pakistan">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary btn-block">Save
+                                                            Changes</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="modal fade" id="edit_personal_details1" aria-hidden="true"
+                                        role="dialog">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Personal Details</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"> <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="row form-row">
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>First Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="John">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Last Name</label>
+                                                                    <input type="text" class="form-control" value="Doe">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label>Date of Birth</label>
+                                                                    <div class="cal-icon">
+                                                                        <input type="text" class="form-control"
+                                                                            value="24-07-1983">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Email ID</label>
+                                                                    <input type="email" class="form-control"
+                                                                        value="johndoe@example.com">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Mobile</label>
+                                                                    <input type="text" value="+1 202-555-0125"
+                                                                        class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h5 class="form-title"><span>Address</span></h5>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <div class="form-group">
+                                                                    <label>Address</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="4663 Agriculture Lane">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>City</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="Miami">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>State</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="Florida">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Zip Code</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="22434">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label>Country</label>
+                                                                    <input type="text" class="form-control"
+                                                                        value="United States">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary btn-block">Save
+                                                            Changes</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="password_tab" class="tab-pane fade">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Change Password</h5>
+                                    <div class="row">
+                                        <div class="col-md-10 col-lg-6">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Old Password</label>
+                                                    <input type="password" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>New Password</label>
+                                                    <input type="password" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Confirm Password</label>
+                                                    <input type="password" class="form-control">
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Save Changes</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END STATISTIC-->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="slick.min.js">
+    </script>
+    <script src="wow.min.js"></script>
+    <script src="animsition.min.js"></script>
+    <script src="bootstrap-progressbar.min.js">
+    </script>
+    <script src="jquery.waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js">
+    </script>
+    <script src="circle-progress.min.js"></script>
+    <script src="perfect-scrollbar.js"></script>
+    <script src="Chart.bundle.min.js"></script>
+    <script src="select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="main.js"></script>
+
+
+
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="select2.min.js"></script>
+    <script src="jquery.slimscroll.min.js"></script>
+    <script src="bootstrap-datetimepicker.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
