@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = require('./index');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 // Load User model
@@ -13,31 +13,58 @@ router.get('/Login', forwardAuthenticated, (req, res) => res.render('Login'));
 // Profile button press
 router.get('/Profile', forwardAuthenticated, (req, res) => res.render('Profile'));
 
-// Signup Page
-router.get('/Signin', forwardAuthenticated, (req, res) => res.render('Signin'));
-
 // Register Page
 router.get('/Signin', forwardAuthenticated, (req, res) => res.render('Signin'));
 
 // Admin Home View
 router.get('/Admin-Dashboard', (req, res) => res.render('Admin-Dashboard'));
 
-
 // Student View
-router.get('/Student-View', (req, res) => {
-    userInfo.find().exec((err,userInf)=>{
-        if(err){
-            res.json({message: err.message});
-        }
-        else{
-            res.render('Student-View',{userInf:userInf});
-        }
-    });
+router.get('/Student-View', async (req, res) => {
+
+    try {
+        const result = await userInfo.find();
+        res.render('Student-View', { Data: result });
+    } catch (err) {
+        console.log(err);
+    }
+    // userInfo.find((err, userInf) => {
+    //     res.render('Student-View', { userData: userInf });
+    // });
 });
 
 // Student Edit
-router.get('/Student-Edit', (req, res) => res.render('Student-Edit'));
+router.get('/Student-Edit/:id', async (req, res) => {
+    try {
+        const result = await userInfo.findById(req.params.id)
+        console.log(result)
+        res.render('Student-Edit',{data:result});
+    } catch (err) {
 
+    }
+});
+
+// Student Update
+router.post('/Student-update/:id',(req,res)=>{
+    var userinfo = new userInfo({
+        fname: req.body.fname,
+        lname: req.body.lname,
+        dob: req.body.dob,
+        cnic: req.body.cnic,
+        mobile: req.body.mob,
+        gender: req.body.gender,
+        address: req.body.address,
+        home_phone: req.body.HP,
+        postal_code: req.body.PC,
+        city: req.body.city,
+        cid: req.body.cid,
+        room_type: req.body.room,
+        room_number: req.body.room_num,
+        mess: req.body.mess
+    })
+   userinfo.save();
+    res.redirect('/users/Student-View');
+})
 // Room View
 router.get('/Room-View', (req, res) => res.render('Room-View'));
 
@@ -191,5 +218,8 @@ router.post('/Register', (req, res, next) => {
     userinfo.save();
     res.redirect('/users/Login');
 });
+
+
+
 
 module.exports = router;

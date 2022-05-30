@@ -42,7 +42,7 @@
                     <div class="header__navbar">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="Admin-Dashboard.html">
+                                <a href="/users/Admin-Dashboard">
                                     <i class="fas "></i>Home
                                     <span class="bot-line"></span>
                                 </a>
@@ -54,10 +54,10 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="Student-View.html">Students View</a>
+                                        <a href="/users/Student-View">Students View</a>
                                     </li>
                                     <li>
-                                        <a href="Student-Edit.html">Students Edit</a>
+                                        <a href="/users/Student-Edit">Students Edit</a>
                                     </li>
                                 </ul>
                             </li>
@@ -68,13 +68,13 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="Room-View.html">Room View</a>
+                                        <a href="/users/Room-View">Room View</a>
                                     </li>
                                     <li>
-                                        <a href="Room-Edit.html">Room Edit</a>
+                                        <a href="/users/Room-Edit">Room Edit</a>
                                     </li>
                                     <li>
-                                        <a href="Add-Room.html">Add Room</a>
+                                        <a href="/users/Add-Room">Add Room</a>
                                     </li>
                                 </ul>
                             </li>
@@ -119,14 +119,9 @@
                                                 <i class="zmdi zmdi-account"></i>Profile
                                             </a>
                                         </div>
-                                        <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-settings"></i>Setting
-                                            </a>
-                                        </div>
                                     </div>
                                     <div class="account-dropdown__footer">
-                                        <a href="#">
+                                        <a href="/users/Logout" target="_self">
                                             <i class="zmdi zmdi-power"></i>Logout
                                         </a>
                                     </div>
@@ -312,53 +307,90 @@
                 <div class="row my-4">
                     <div class="col-lg-12">
                         <div class="table-responsive">
-                            <% if (userInf!='') { %>
-                                <table class="text-center table table-stripped">
-                                    <thead>
-                                        <tr class="table-dark">
-                                            <th>ID</th>
-                                            <th>First Name</th>
-                                            <th>Second Name</th>
-                                            <th>DOB</th>
-                                            <th>CNIC</th>
-                                            <th>Mobile</th>
-                                            <th>Gender</th>
-                                            <th>Address</th>
-                                            <th>Home Phone</th>
-                                            <th>Postal Code</th>
-                                            <th>City</th>
-                                            <th>Check In Date</th>
-                                            <th>Room type</th>
-                                            <th>Room Number</th>
-                                            <th>Mess</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                      <% userInf.forEach(row, index) => { %>
-                                        <tr>
-                                            <td><% index %> </td>
-                                            <td><% row.fname %> </td>
-                                            <td><% row.lname %> </td>
-                                            <td><% row.dob %> </td>
-                                            <td><% row.cnic %> </td>
-                                            <td><% row.mobile %> </td>
-                                            <td><% row.gender %> </td>
-                                            <td><% row.address %> </td>
-                                            <td><% row.home_phone %> </td>
-                                            <td><% row.postal_code %> </td>
-                                            <td><% row.city %> </td>
-                                            <td><% row.cid %> </td>
-                                            <td><% row.room_type %> </td>
-                                            <td><% row.room_number %> </td>
-                                            <td><% row.mess %> </td>
-                                        </tr>
-                                      <% }) %>
-                                    </tbody>
-                                </table>
-                                <% } else { %>
-                                    <h1 class="text-center text-secondary mt-5">No user found in the database!</h1>
-                                <% } %>
+                            <table class="text-center table table-stripped">
+                                <thead>
+                                    <tr class="table-dark">
+                                        <th>ID</th>
+                                        <th>First Name</th>
+                                        <th>Second Name</th>
+                                        <th>DOB</th>
+                                        <th>CNIC</th>
+                                        <th>Mobile</th>
+                                        <th>Gender</th>
+                                        <th>Address</th>
+                                        <th>Home Phone</th>
+                                        <th>Postal Code</th>
+                                        <th>City</th>
+                                        <th>Check In Date</th>
+                                        <th>Room type</th>
+                                        <th>Room Number</th>
+                                        <th>Mess</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% var i=1 %>
+                                        <% Data.forEach((item)=> { %>
+                                            <tr>
+                                                <td>
+                                                    <%= i++ %>
+                                                </td>
+                                                <td>
+                                                    <%= item.fname %>
+                                                </td>
+                                                <td>
+                                                    <%= item.lname %>
+                                                </td>
+                                                <td>
+                                                    <%= item.dob %>
+                                                </td>
+                                                <td>
+                                                    <%= item.cnic %>
+                                                </td>
+                                                <td>
+                                                    <%= item.mobile %>
+                                                </td>
+                                                <td>
+                                                    <%= item.gender %>
+                                                </td>
+                                                <td>
+                                                    <%= item.address %>
+                                                </td>
+                                                <td>
+                                                    <%= item.home_phone %>
+                                                </td>
+                                                <td>
+                                                    <%= item.postal_code %>
+                                                </td>
+                                                <td>
+                                                    <%= item.city %>
+                                                </td>
+                                                <td>
+                                                    <%= item.cid %>
+                                                </td>
+                                                <td>
+                                                    <%= item.room_type %>
+                                                </td>
+                                                <td>
+                                                    <%= item.room_number %>
+                                                </td>
+                                                <td>
+                                                    <%= item.mess %>
+                                                </td>
+                                                <td>
+                                                    <form action="/users/Student-Edit/<%= item._id%>" method="get" class="d-inline">
+                                                        <button type="submit">
+                                                            <i class="fas fa-pen text-info"></i>
+                                                        </button>
 
+                                                    </form>
+
+                                                    <i class="fas fa-trash text-danger"></i>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
 const bodyParser=require('body-parser');
+const {join} = require('path');
 const app = express();
 
 // Passport Config
@@ -12,6 +13,9 @@ require('./config/passport')(passport);
 
 // DB Config
 const db = require('./config/keys').mongoURI;
+
+app.use(express.static(join(process.cwd(),"assets")))
+app.use(express.static(join(process.cwd(),"vendor")))
 
 // Connect to MongoDB
 mongoose
@@ -57,7 +61,9 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 
-const PORT = process.env.PORT || 8090; 
+const PORT = process.env.PORT || 8020;
+
+
 
 // create application/json parser
 var jsonParser = bodyParser.json()
