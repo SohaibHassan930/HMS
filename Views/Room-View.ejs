@@ -4,13 +4,13 @@
 <head>
 
     <!-- Title Page-->
-    <title>Room View</title>
-
+    <title>Student View</title>
     <!-- Fontfaces CSS-->
     <link href="font-face.css" rel="stylesheet" media="all">
     <link href="font-awesome.min.css" rel="stylesheet" media="all">
     <link href="fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.css" />
 
     <!-- Bootstrap CSS-->
     <link href="bootstrap.min.css" rel="stylesheet" media="all">
@@ -43,7 +43,7 @@
                     <div class="header__navbar">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="Admin-Dashboard.html">
+                                <a href="/users/Admin-Dashboard">
                                     <i class="fas "></i>Home
                                     <span class="bot-line"></span>
                                 </a>
@@ -55,10 +55,7 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="Student-View.html">Students View</a>
-                                    </li>
-                                    <li>
-                                        <a href="Student-Edit.html">Students Edit</a>
+                                        <a href="/users/Student-View">Students View/Edit</a>
                                     </li>
                                 </ul>
                             </li>
@@ -69,13 +66,10 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="Room-View.html">Room View</a>
+                                        <a href="/users/Room-View">Room View/Edit</a>
                                     </li>
                                     <li>
-                                        <a href="Room-Edit.html">Room Edit</a>
-                                    </li>
-                                    <li>
-                                        <a href="Add-Room.html">Add Room</a>
+                                        <a href="/users/Add-Room">Add Room</a>
                                     </li>
                                 </ul>
                             </li>
@@ -87,7 +81,7 @@
                             </li>
                             <li>
                                 <a href="Check-Out.html">
-                                    <i class="fas "></i>Check Out
+                                    <i class="fas "></i>Check out
                                     <span class="bot-line"></span>
                                 </a>
                             </li>
@@ -97,7 +91,7 @@
                         <div class="account-wrap">
                             <div class="account-item account-item--style2 clearfix js-item-menu">
                                 <div class="image">
-                                    <img src="images/icon/avatar-01.png" alt="Raees" />
+                                    <img src="../assets/img/hotel_logo.png" alt="Raees" />
                                 </div>
                                 <!-- <div class="content">
                                     <a class="js-acc-btn" href="#">Raess Malik</a>
@@ -105,7 +99,7 @@
                                 <div class="account-dropdown js-dropdown">
                                     <div class="info clearfix">
                                         <div class="image">
-                                            <img src="images/icon/avatar-01.png" alt="Raees" />
+                                            <img src="../assets/img/hotel_logo.png" alt="Raees" />
                                         </div>
                                         <div class="content">
                                             <h5 class="name">
@@ -120,14 +114,9 @@
                                                 <i class="zmdi zmdi-account"></i>Profile
                                             </a>
                                         </div>
-                                        <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-settings"></i>Setting
-                                            </a>
-                                        </div>
                                     </div>
                                     <div class="account-dropdown__footer">
-                                        <a href="#">
+                                        <a href="/users/Logout" target="_self">
                                             <i class="zmdi zmdi-power"></i>Logout
                                         </a>
                                     </div>
@@ -170,10 +159,7 @@
                                 <i class="fas "></i>Student</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Student-View.html">Students View</a>
-                                </li>
-                                <li>
-                                    <a href="Student-Edit.html">Students Edit</a>
+                                    <a href="Student-View.html">Students View/Edit</a>
                                 </li>
                             </ul>
                         </li>
@@ -184,10 +170,7 @@
                                 <i class="fas "></i>Room</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="Room-View.html">Room View</a>
-                                </li>
-                                <li>
-                                    <a href="Room-Edit.html">Room Edit</a>
+                                    <a href="Room View.html">Room View/Edit</a>
                                 </li>
                                 <li>
                                     <a href="Add-Room.html">Add Room</a>
@@ -277,7 +260,7 @@
                                     <span class="au-breadcrumb-span">You are here:</span>
                                     <ul class="list-unstyled list-inline au-breadcrumb__list">
                                         <li class="list-inline-item active">
-                                            <a href="#">Room</a>
+                                            <a href="#">Student</a>
                                         </li>
                                         <li class="list-inline-item seprate">
                                             <span>/</span>
@@ -297,84 +280,117 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="title-4">Room
-                                <span>Details</span>
+                            <h1 class="title-4">Total
+                                <span>Students</span>
                             </h1>
-                            <hr class="line-seprate">
+                            <!-- <hr class="line-seprate"> -->
                         </div>
                     </div>
                 </div>
+
+
             </section>
             <!-- END WELCOME-->
 
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="datatable table table-stripped">
-                                    <thead>
-                                        <tr>
-                                            <th>Room Number</th>
-                                            <th>Total Beds</th>
-                                            <th>Book Bed</th>
-                                            <th>Available Bed</th>
-                                            <th>Room Available</th>
-                                            <th>Room Type</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>Yes</td>
-                                            <td>Double</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>Yes</td>
-                                            <td>Double</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>Yes</td>
-                                            <td>Double</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>Yes</td>
-                                            <td>Double</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>0</td>
-                                            <td>No</td>
-                                            <td>Single</td>
-                                        </tr>
-                                        <tr>
-                                            <td>109</td>
-                                            <td>6</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>Yes</td>
-                                            <td>Double</td>
-                                        </tr>
+            <div class="container">
+                <div class="row my-4">
+                    <div class="col-sm-12">
+                        <div class="card card-table">
+                            <div class="card-body booking_card">
+                                <div class="table-responsive">
+                                    <table id="tablemanager"
+                                        class="table table-stripped table table-hover table-center mb-0">
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th>ID</th>
+                                                <th>First Name</th>
+                                                <th>Second Name</th>
+                                                <th>DOB</th>
+                                                <th>CNIC</th>
+                                                <th>Mobile</th>
+                                                <th>Gender</th>
+                                                <th>Address</th>
+                                                <th>Home Phone</th>
+                                                <th>Postal Code</th>
+                                                <th>City</th>
+                                                <th>Check In Date</th>
+                                                <th>Room type</th>
+                                                <th>Room Number</th>
+                                                <th>Mess</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% var i=1 %>
+                                                <% Data.forEach((item)=> { %>
+                                                    <tr>
+                                                        <td>
+                                                            <%= i++ %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.fname %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.lname %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.dob %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.cnic %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.mobile %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.gender %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.address %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.home_phone %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.postal_code %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.city %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.cid %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.room_type %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.room_number %>
+                                                        </td>
+                                                        <td>
+                                                            <%= item.mess %>
+                                                        </td>
+                                                        <td>
+                                                            <form action="/users/Edit/<%= item._id%>" method="get"
+                                                                class="d-inline">
+                                                                <button type="submit">
+                                                                    <i class="fas fa-pen text-info"></i>
+                                                                </button>
+                                                            </form>
 
-                                    </tbody>
-                                </table>
+                                                            <form action="/users/Delete/<%= item._id%>" method="get"
+                                                                class="d-inline">
+                                                                <button type="submit">
+                                                                    <i class="fas fa-trash text-danger"></i>
+                                                                </button>
+                                                            </form>
+
+                                                            <!-- <i class="fas fa-trash text-danger"></i> -->
+                                                        </td>
+                                                    </tr>
+                                                    <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -384,7 +400,6 @@
 
     </div>
 
-    <!-- Jquery JS-->
     <script src="jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="popper.min.js"></script>
@@ -415,6 +430,12 @@
     <script src="jquery.dataTables.min.js"></script>
     <script src="datatables.min.js"></script>
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tablemanager').DataTable();
+        });
+    </script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@ const passport = require('passport');
 // Load User model
 const User = require('../Model/user');
 const userInfo = require('../Model/userinfo');
+const Room = require('../Model/rooms');
 const { forwardAuthenticated } = require('../config/auth');
 
 // Login Page
@@ -19,6 +20,9 @@ router.get('/Signin', forwardAuthenticated, (req, res) => res.render('Signin'));
 // Admin Home View
 router.get('/Admin-Dashboard', (req, res) => res.render('Admin-Dashboard'));
 
+// Add Room View
+router.get('/Add-Room', (req, res) => res.render('Add-Room'));
+
 // Student View
 router.get('/Student-View', async (req, res) => {
 
@@ -28,48 +32,88 @@ router.get('/Student-View', async (req, res) => {
     } catch (err) {
         console.log(err);
     }
-    // userInfo.find((err, userInf) => {
-    //     res.render('Student-View', { userData: userInf });
-    // });
 });
 
-// Student Edit
-router.get('/Student-Edit/:id', async (req, res) => {
-    try {
-        const result = await userInfo.findById(req.params.id)
-        console.log(result)
-        res.render('Student-Edit',{data:result});
-    } catch (err) {
 
+// room View
+router.get('/Room-View', async (req, res) => {
+
+    try {
+        const result = await Room.find();
+        res.render('Room-View', { Data: result });
+    } catch (err) {
+        console.log(err);
     }
 });
 
+// Student Edit
+router.get('/Edit/:id', (req, res) => {
+    let id = req.params.id;
+    userInfo.findById(id, (err, result) => {
+        if (err) {
+            res.redirect('/');
+        }
+        else {
+            res.render('Student-Edit', { data: result })
+        }
+    });
+});
+// Room Edit
+router.get('/RoomEdit/:id', (req, res) => {
+    let id = req.params.id;
+    Room.findById(id, (err, result) => {
+        if (err) {
+            res.redirect('/');
+        }
+        else {
+            res.render('Room-Edit', { data: result })
+        }
+    });
+});
+
 // Student Update
-router.post('/Student-update/:id',(req,res)=>{
-    var userinfo = new userInfo({
-        fname: req.body.fname,
-        lname: req.body.lname,
-        dob: req.body.dob,
-        cnic: req.body.cnic,
-        mobile: req.body.mob,
-        gender: req.body.gender,
-        address: req.body.address,
-        home_phone: req.body.HP,
-        postal_code: req.body.PC,
-        city: req.body.city,
-        cid: req.body.cid,
-        room_type: req.body.room,
-        room_number: req.body.room_num,
-        mess: req.body.mess
+router.post('/update/:id', function (req, res) {
+    userInfo.findByIdAndUpdate(req.params.id, {
+        $set: {
+            mobile: req.body.mob, address: req.body.address, home_phone: req.body.HP, postal_code: req.body.PC, city: req.body.city, cid: req.body.cid, room_type: req.body.room,
+            room_number: req.body.room_num
+        }
+    },
+        function (err, product) {
+            if (err) return next(err);
+            res.redirect('/users/Student-View');
+        });
+});
+
+// Room Update
+router.post('/RoomUpdate/:id', function (req, res) {
+    Room.findByIdAndUpdate(req.params.id, {
+        $set: {
+            room_num: req.body.room_num, bed: req.body.bed, room_type: req.body.room_type
+        }
+    },
+        function (err, product) {
+            if (err) return next(err);
+            res.redirect('/users/Room-View');
+        });
+});
+
+// Student Delete
+router.get('/Delete/:id', (req, res, next) => {
+    userInfo.findByIdAndDelete({ _id: req.params.id }, (err, data) => {
+        if (err) {
+            next(err);
+        }
+        else {
+            res.redirect('/users/Student-View');
+        }
     })
-   userinfo.save();
-    res.redirect('/users/Student-View');
 })
+
+// res.redirect('/users/Student-View');
 // Room View
 router.get('/Room-View', (req, res) => res.render('Room-View'));
 
-// Room Edit
-router.get('/Room-Edit', (req, res) => res.render('Room-Edit'));
 
 // Add Room
 router.get('/Add-Room', (req, res) => res.render('Add-Room'));
@@ -160,11 +204,9 @@ router.get('/Register', (req, res) => res.render('Register'));
 //------------ Forgot Password Route ------------//
 router.get('/forgot', (req, res) => res.render('forgot'));
 
-//------------ Reset Password Route ------------//
-router.get('/reset/:id', (req, res) => {
-    // console.log(id)
-    res.render('reset', { id: req.params.id })
-});
+//------------ Student Edit ------------//
+router.get('/Student-Edit', (req, res) => res.render('Student-Edit'));
+
 
 //------------ Forgot Password Handle ------------//
 router.post('/forgot', (req, res) => {
@@ -219,6 +261,18 @@ router.post('/Register', (req, res, next) => {
     res.redirect('/users/Login');
 });
 
+
+//------------ Room add Form Handle ------------//
+router.post('/Add-Room', (req, res, next) => {
+    var rooms = new Room({
+        room_num: req.body.room_num,
+        room_type: req.body.room,
+        bed: req.body.bed
+    })
+    // console.log(rooms);
+    rooms.save();
+    res.redirect('/users/Admin-Dashboard');
+});
 
 
 

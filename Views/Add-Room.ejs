@@ -49,7 +49,7 @@
                     <div class="header__navbar">
                         <ul class="list-unstyled">
                             <li>
-                                <a href="Admin-Dashboard.html">
+                                <a href="/users/Admin-Dashboard">
                                     <i class="fas "></i>Home
                                     <span class="bot-line"></span>
                                 </a>
@@ -61,10 +61,7 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="Student-View.html">Students View</a>
-                                    </li>
-                                    <li>
-                                        <a href="Student-Edit.html">Students Edit</a>
+                                        <a href="/users/Student-View">Students View/Edit</a>
                                     </li>
                                 </ul>
                             </li>
@@ -75,13 +72,10 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="Room-View.html">Room View</a>
+                                        <a href="/users/Room-View">Room View/Edit</a>
                                     </li>
                                     <li>
-                                        <a href="Room-View.html">Room Edit</a>
-                                    </li>
-                                    <li>
-                                        <a href="Add-Room.html">Add Room</a>
+                                        <a href="/users/Add-Room">Add Room</a>
                                     </li>
                                 </ul>
                             </li>
@@ -93,7 +87,7 @@
                             </li>
                             <li>
                                 <a href="Check-Out.html">
-                                    <i class="fas "></i>Check Out
+                                    <i class="fas "></i>Check out
                                     <span class="bot-line"></span>
                                 </a>
                             </li>
@@ -126,14 +120,9 @@
                                                 <i class="zmdi zmdi-account"></i>Profile
                                             </a>
                                         </div>
-                                        <div class="account-dropdown__item">
-                                            <a href="#">
-                                                <i class="zmdi zmdi-settings"></i>Setting
-                                            </a>
-                                        </div>
                                     </div>
                                     <div class="account-dropdown__footer">
-                                        <a href="#">
+                                        <a href="/users/Logout" target="_self">
                                             <i class="zmdi zmdi-power"></i>Logout
                                         </a>
                                     </div>
@@ -238,7 +227,7 @@
                                 <div class="image">
                                     <a href="#">
                                         <img src="images/icon/avatar-01.png" alt="Raees" />
-                                        
+
                                     </a>
                                 </div>
                                 <div class="content">
@@ -316,56 +305,29 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <form>
+                    <form method="post" action="/users/Add-Room">
                         <div class="row formtype">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Room Number</label>
-                                    <input class="form-control" type="text" value="BKG-0001">
+                                    <input class="form-control" type="text" id="room_num" name="room_num"
+                                        placeholder="G11" required>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Room Type</label>
-                                    <select class="form-control" id="sel1" name="sellist1">
+                                    <select class="form-control" id="room" name="room" required>
                                         <option>Select</option>
                                         <option>Single</option>
                                         <option>Double</option>
-                                        <option>Quad</option>
-                                        <option>King</option>
-                                        <option>Suite</option>
-                                        <option>Villa</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>AC/NON-AC</label>
-                                    <select class="form-control" id="sel2" name="sellist1">
-                                        <option>Select</option>
-                                        <option>AC</option>
-                                        <option>NON-AC</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Food</label>
-                                    <select class="form-control" id="sel3" name="sellist1">
-                                        <option>Select</option>
-                                        <option>Free Breakfast</option>
-                                        <option>Free Lunch</option>
-                                        <option>Free Dinner</option>
-                                        <option>Free Breakfast & Dinner</option>
-                                        <option>Free Welcome Drink</option>
-                                        <option>No Free Food</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Bed Count</label>
-                                    <select class="form-control" id="sel" name="sellist1">
+                                    <select class="form-control" id="bed" name="bed" required>
                                         <option>Select</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -376,50 +338,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Charges For cancellation</label>
-                                    <select class="form-control" id="sel4" name="sellist1">
-                                        <option>Select</option>
-                                        <option>Free</option>
-                                        <option>5% Before 24Hours</option>
-                                        <option>No Cancellation Allow</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Rent</label>
-                                    <input type="text" class="form-control" id="usr">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <input type="text" class="form-control" id="usr1">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>File Upload</label>
-                                    <div class="custom-file mb-3">
-                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                        <label class="custom-file-label" for="customFile">Choose file</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Message</label>
-                                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn btn-primary buttonedit ml-2">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary buttonedit ml-2">Save</button>
-            <!-- <button type="button" class="btn btn-primary buttonedit">Cancel</button> -->
         </div>
 
     </div>
